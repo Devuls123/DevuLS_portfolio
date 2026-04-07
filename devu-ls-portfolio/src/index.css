@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Thermal Palette */
+  --color-primary: #FF4D00;
+  --color-primary-container: #FF571A;
+  --color-secondary-container: #972D00;
+  --color-surface: #131313;
+  --color-surface-container-lowest: #0E0E0E;
+  --color-surface-container-low: #121212;
+  --color-surface-container-high: #1E1E1E;
+  --color-surface-container-highest: #222222;
+  --color-on-surface-variant: #A0A0A0;
+  --color-outline-variant: rgba(255, 255, 255, 0.15);
+
+  --radius-lg: 2.5rem;
+  --radius-xl: 3.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface-container-lowest text-white font-sans antialiased selection:bg-primary selection:text-white;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/[0.04] backdrop-blur-3xl border border-white/[0.05];
+  }
+
+  .thermal-gradient {
+    background: linear-gradient(135deg, var(--color-primary-container) 0%, var(--color-secondary-container) 100%);
+  }
+
+  .thermal-shadow {
+    box-shadow: 0px 24px 48px rgba(151, 45, 0, 0.08);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 40px rgba(255, 77, 0, 0.4);
+  }
+}
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-surface-container-lowest;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-container-highest rounded-full hover:bg-primary/50 transition-colors;
+}
