@@ -106,8 +106,8 @@ API_KEY=your_api_key_here
 
 Feel free to connect with me:
 
-* GitHub: https://github.com/YOUR_USERNAME
-* LinkedIn: (Add your LinkedIn link)
+* GitHub:  https://github.com/Devuls123 
+* LinkedIn:(https://www.linkedin.com/in/devu-l-s-b65176328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
 ---
 
